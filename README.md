@@ -206,3 +206,7 @@ docker-compose up -d
 ### 1.12. Acessar a Aplicação
 
 Com o ambiente todo funcionando será possível acessar a aplicaçãoa través do navegador com a url [http://localhost:3000](http://localhost:3000).
+
+Acessando a url será exibido algo parecido com a imagem abaixo.
+
+![](https://i.imgur.com/AGvHrgs.png)
