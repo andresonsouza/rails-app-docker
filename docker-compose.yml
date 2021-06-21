@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - rails-network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@pgadmin.com.br"
+      PGADMIN_DEFAULT_PASSWORD: "pgadmin2021"
+    ports:
+      - 8888:80
+    depends_on:
+      - db
+    networks:
+      - rails-network
+
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/my-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    networks:
+      - rails-network
+
+networks:
+  rails-network:
+    driver: bridge
