@@ -4,12 +4,12 @@
 
 Seguindo orientações da [documentação oficial do docker](https://docs.docker.com/samples/rails/) vamos criar a seguinte estrutura de arquivos:
 
-📦Project
- ┣ 📜Dockerfile
- ┣ 📜Gemfile
- ┣ 📜Gemfile.lock
- ┣ 📜docker-compose.yml
- ┗ 📜entrypoint.sh
+📦Project &nbsp;
+ ┣ 📜Dockerfile &nbsp;
+ ┣ 📜Gemfile &nbsp;
+ ┣ 📜Gemfile.lock &nbsp;
+ ┣ 📜docker-compose.yml &nbsp;
+ ┗ 📜entrypoint.sh &nbsp;
 
 ### 1.1. Dockerfile
 
@@ -121,29 +121,29 @@ docker-compose run --no-deps web rails new . --force --database=postgresql
 
 A estrutura de arquivos deve ser algo semelhante ao que você vê a seguir:
 
-📦Project
- ┣ 📂app
- ┣ 📂bin
- ┣ 📂config
- ┣ 📂db
- ┣ 📂lib
- ┣ 📂log
- ┣ 📂public
- ┣ 📂storage
- ┣ 📂test
- ┣ 📂tmp
- ┣ 📂vendor
- ┣ 📜.gitignore
- ┣ 📜.ruby-version
- ┣ 📜config.ru
- ┣ 📜docker-compose.yml
- ┣ 📜Dockerfile
- ┣ 📜entrypoint.sh
- ┣ 📜Gemfile
- ┣ 📜Gemfile.lock
- ┗ 📜package.json
- ┣ 📜Rakefile
- ┣ 📜README.md
+📦Project &nbsp;
+ ┣ 📂app &nbsp;
+ ┣ 📂bin &nbsp;
+ ┣ 📂config &nbsp;
+ ┣ 📂db &nbsp;
+ ┣ 📂lib &nbsp;
+ ┣ 📂log &nbsp;
+ ┣ 📂public &nbsp;
+ ┣ 📂storage &nbsp;
+ ┣ 📂test &nbsp;
+ ┣ 📂tmp &nbsp;
+ ┣ 📂vendor &nbsp;
+ ┣ 📜.gitignore &nbsp;
+ ┣ 📜.ruby-version &nbsp;
+ ┣ 📜config.ru &nbsp;
+ ┣ 📜docker-compose.yml &nbsp;
+ ┣ 📜Dockerfile &nbsp;
+ ┣ 📜entrypoint.sh &nbsp;
+ ┣ 📜Gemfile &nbsp;
+ ┣ 📜Gemfile.lock &nbsp;
+ ┗ 📜package.json &nbsp;
+ ┣ 📜Rakefile &nbsp;
+ ┣ 📜README.md &nbsp;
 
 ### 1.7. Permissões de Arquivos
 O projeto é gerado com as permissções de usuário root, então é importante alterar as permissões para o usuário corrente.
