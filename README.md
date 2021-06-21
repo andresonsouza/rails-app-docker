@@ -210,3 +210,46 @@ Com o ambiente todo funcionando será possível acessar a aplicaçãoa través d
 Acessando a url será exibido algo parecido com a imagem abaixo.
 
 ![](https://i.imgur.com/AGvHrgs.png)
+
+
+### 1.13. PgAdmin
+
+Após os dois serviços subirem vamos abrir o browser e digitar a seguinte url:
+
+[http://localhost:8888](http://localhost:8888)
+
+A porta "8888" é a porta que foi definida no arquivo docker-compose.yml para o serviço pgadmin rodar.
+
+Após alguns segundos será exibida a seguinte tela:
+
+![](./assets/login.png)
+
+Para logar basta usar o email e password definidos no environment do serviço, que são mostrados abaixo:
+
+Email: admin@pgadmin.com.br
+
+Senha: pgadmin2021
+
+Após o login será exibido o painel principal, como mostra a imagem abaixo.
+
+![](./assets/pos-login.png)
+
+### Configure uma conexão entre o postgresql e o pgadmin
+
+Para criar a conexão vamos clicar na opção Add New Server  e vamos inserir os dados definidos no arquivo docker-compose.yml. São eles:
+
+* **Name** - Primeiramente vamos definir um nome qualquer para a conexão na aba "General". Eu usei o nome "docker".
+
+* **Host name/address** - Agora na aba Connection vamos usar a url do serviço que no nosso caso é o nome do container definido, "db".
+
+* **Port** - A porta é a padrão do postgresql, a porta "5432".
+
+* **Username** - O username é o padrão "postgres".
+
+* **Password** - O password é o que definimos no arquivo, "postgres".
+
+![](./assets/conexao.png)
+
+Após salvar as configuração deverá ser exibido um dashboard como mostra a imagem abaixo e o ambiente de estudos já está pronto.
+
+![](./assets/dashboard.png)
