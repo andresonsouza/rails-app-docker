@@ -80,6 +80,8 @@ services:
       - "5432:5432"
     networks:
       - rails-network
+    volumes:
+      - db-postgres:/var/lib/postgresql/data
 
   pgadmin:
     image: dpage/pgadmin4
@@ -109,6 +111,9 @@ services:
 networks:
   rails-network:
     driver: bridge
+
+volumes:
+  db-postgres: {}
 ```
 
 ### 1.6. Gerar a Estrura da Aplicação Rails
