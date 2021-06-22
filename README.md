@@ -217,7 +217,19 @@ Acessando a url será exibido algo parecido com a imagem abaixo.
 ![](https://i.imgur.com/AGvHrgs.png)
 
 
-### 1.13. PgAdmin
+### 1.13. Executar comandos
+
+Para criar modelos, views e etc, use o comando:
+```RUBY
+docker-compose run web rails g <something> <options>
+```
+Exemplo para gerar um model de usuário usando a gem devise
+
+```BASH
+docker-compose run web rails g devise user
+```
+
+### 1.14. PgAdmin
 
 Após os dois serviços subirem vamos abrir o browser e digitar a seguinte url:
 
@@ -239,7 +251,7 @@ Após o login será exibido o painel principal, como mostra a imagem abaixo.
 
 ![](./assets/pos-login.png)
 
-### Configure uma conexão entre o postgresql e o pgadmin
+### 1.15. Configure uma conexão entre o postgresql e o pgadmin
 
 Para criar a conexão vamos clicar na opção Add New Server  e vamos inserir os dados definidos no arquivo docker-compose.yml. São eles:
 
